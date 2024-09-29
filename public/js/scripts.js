@@ -8,8 +8,9 @@
 //Validación de Formularios: Se mantiene la validación básica para asegurar la entrada de datos.
 //Nota: Para utilizar AOS, debemos incluir su archivo CSS y JS en nuestro proyecto.
 //
+
 // Esperar a que el documento esté listo
-$(document).ready(function() {
+/*$(document).ready(function() {
     // Activar tooltips de Bootstrap
     $('[data-toggle="tooltip"]').tooltip();
   
@@ -54,4 +55,26 @@ $(document).ready(function() {
       once: true,
     });
   });
-  
+   */ 
+
+  // scripts.js
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Navbar transparente que cambia al hacer scroll
+  var navbar = document.querySelector('.navbar');
+  window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+      } else {
+          navbar.classList.remove('scrolled');
+      }
+  });
+
+  // Inicializar AOS (si no lo haces en footer.php)
+  // AOS.init({
+  //     duration: 1000,
+  //     once: true,
+  // });
+
+  // Otros scripts personalizados...
+  });

@@ -1,15 +1,6 @@
-/* estilos.css */
-/*Explicación de las mejoras:
-
-Animaciones en el Banner: Utilizamos animaciones keyframe (slideDown y fadeIn) para que el título y el subtítulo aparezcan con efectos al cargar la página.
-Efectos Hover en las Secciones: Las imágenes en las secciones destacadas giran al pasar el cursor, y las tarjetas se elevan ligeramente.
-Navbar Dinámico: Cambia de color al hacer scroll, gracias a la clase .scrolled que añadiremos con JavaScript.
-Transiciones Suaves: Se agregan transiciones a elementos interactivos para mejorar la experiencia del usuario.
-Mejora en Responsividad: Ajustamos tamaños de fuente y espacios para dispositivos móviles.*/
+/* styles.css */
 
 /* Tipografías y colores */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 body {
   font-family: 'Roboto', sans-serif;
   color: #333;
@@ -17,44 +8,87 @@ body {
   margin: 0;
 }
 
-/* Estilos para el Navbar */
+h1, h2, h3, h4, h5, h6 {
+  color: #004080;
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Navbar */
 .navbar {
-  background-color: #004080;
+  background-color: transparent;
   transition: background-color 0.3s ease;
 }
 
-.navbar-brand, .navbar-nav .nav-link {
-  color: #fff !important;
-  font-weight: 500;
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+  position: relative;
+  transition: color 0.3s;
 }
 
-.navbar-nav .nav-link:hover {
-  color: #ffcc00 !important;
+.navbar-dark .navbar-nav .nav-link::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background-color: #ffcc00;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s;
 }
 
-.navbar-toggler {
-  border-color: #fff;
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ffcc00;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover::after {
+  width: 100%;
 }
 
 .navbar.scrolled {
-  background-color: #00264d;
+  background-color: #004080 !important;
 }
 
-/* Banner principal */
-.jumbotron {
-  background-image: url('../images/banner-ciencia.jpg');
+/* Logo */
+.navbar-brand img {
+  margin-right: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #004080;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsividad */
+@media (max-width: 992px) {
+  .navbar-collapse {
+      background-color: #004080;
+  }
+  .navbar-nav .nav-link {
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+  }
+}
+
+/* Hero Section */
+.hero-section {
+  background-image: url('../public/images/hero-bg.png');
   background-size: cover;
   background-position: center;
   color: #fff;
   height: 100vh;
   position: relative;
-  margin-bottom: 0;
-  display: flex;
-  align-items: center;
-  text-align: center;
 }
 
-.jumbotron::after {
+.hero-section::after {
   content: '';
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
@@ -64,144 +98,7 @@ body {
   left: 0;
 }
 
-.jumbotron .container {
+.hero-section .container {
   position: relative;
   z-index: 1;
-}
-
-.jumbotron h1 {
-  font-size: 4em;
-  animation: slideDown 1s forwards;
-  opacity: 0;
-}
-
-.jumbotron p {
-  font-size: 1.5em;
-  margin-top: 20px;
-  animation: fadeIn 2s forwards;
-  opacity: 0;
-}
-
-@keyframes slideDown {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  from {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-  from {
-    opacity: 0;
-  }
-}
-
-/* Secciones destacadas */
-.section {
-  padding: 60px 0;
-}
-
-.section h2 {
-  margin-bottom: 30px;
-  font-weight: 700;
-}
-
-.section .col-md-4 {
-  margin-bottom: 30px;
-}
-
-.section .col-md-4:hover {
-  transform: translateY(-10px);
-  transition: transform 0.3s ease;
-}
-
-.section img {
-  width: 100px;
-  height: 100px;
-  transition: transform 0.3s ease;
-}
-
-.section img:hover {
-  transform: rotate(360deg);
-}
-
-.btn-custom {
-  background-color: #ffcc00;
-  color: #004080;
-  border: none;
-  font-weight: 700;
-}
-
-.btn-custom:hover {
-  background-color: #e6b800;
-  color: #fff;
-}
-
-.btn-custom:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-/* Pie de página */
-footer {
-  background-color: #004080;
-  color: #fff;
-  padding: 20px 0;
-}
-
-footer p {
-  margin: 0;
-}
-
-/* Formularios */
-.form-control {
-  border-radius: 0;
-}
-
-.btn-primary {
-  background-color: #004080;
-  border-color: #004080;
-}
-
-.btn-primary:hover {
-  background-color: #003366;
-  border-color: #003366;
-}
-
-.btn-primary:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-/* Enlaces */
-a {
-  color: #004080;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #ffcc00;
-  text-decoration: none;
-}
-
-/* Animación del scroll */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Responsividad */
-@media (max-width: 768px) {
-  .jumbotron h1 {
-    font-size: 2.5em;
-  }
-  
-  .jumbotron p {
-    font-size: 1.2em;
-  }
 }

@@ -1,19 +1,24 @@
+</html>
     <!-- Pie de página -->
-    <footer class="text-center">
-        <p>&copy; <?php echo date('Y'); ?> ADRC. Todos los derechos reservados.</p>
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p class="mb-0">&copy; <?= date('Y'); ?> ADRC. Todos los derechos reservados.</p>
+        </div>
     </footer>
-    <!-- Enlaces a JavaScript -->
-    <script src="/public/js/jquery.min.js"></script>
-    <script src="/public/js/bootstrap.bundle.min.js"></script>
-    <!-- Enlace a tu JS personalizado -->
-    <script src="/public/js/scripts.js"></script>
-    <!-- Enlaces a JavaScript -->
-    <script src="/public/js/jquery.min.js"></script>
-    <script src="/public/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Scripts de JavaScript -->
+    <!-- Bootstrap Bundle JS (incluye Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- AOS JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <!-- Enlace a tu JS personalizado -->
-    <script src="/public/js/scripts.js"></script>
-
+    <!-- Inicializar AOS -->
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+    <!-- Tu script personalizado -->
+    <script src="../public/js/scripts.js"></script>
 </body>
 </html>

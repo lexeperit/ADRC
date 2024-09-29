@@ -4,45 +4,92 @@
 $titulo = 'Inicio';
 include '../templates/header.php';
 ?>
-<!-- AOS CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-<!-- AOS JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
 <!-- Banner principal -->
-<div class="jumbotron jumbotron-fluid text-center">
-    <div class="container">
-        <h1 class="display-4">Bienvenidos a ADRC</h1>
+<section class="hero-section d-flex align-items-center">
+    <div class="container text-center" data-aos="fade-up">
+        <h1 class="display-3">Bienvenidos a ADRC</h1>
         <p class="lead">Inspirando el interés por la ciencia y la tecnología</p>
+        <a href="#secciones" class="btn btn-primary btn-lg mt-4">Descubre más</a>
     </div>
-</div>
+</section>
 
 <!-- Secciones Destacadas -->
-<div class="container section">
-    <div class="row text-center">
-        <!-- Revista -->
-        <div class="col-md-4" data-aos="fade-up">
-            <img src="/public/images/revista.png" alt="Revista" class="mb-3" style="width: 100px;">
-            <h2>Revista</h2>
-            <p>Explora nuestra última edición y sumérgete en el mundo de la ciencia.</p>
-            <p><a class="btn btn-custom" href="revista.php" role="button">Leer más &raquo;</a></p>
-        </div>
-        <!-- Congresos -->
-        <div class="col-md-4" data-aos="fade-up">
-            <img src="/public/images/congreso.png" alt="Congresos" class="mb-3" style="width: 100px;">
-            <h2>Congresos</h2>
-            <p>Infórmate sobre nuestros próximos eventos y cómo participar.</p>
-            <p><a class="btn btn-custom" href="congresos.php" role="button">Ver más &raquo;</a></p>
-        </div>
-        <!-- Cursos -->
-        <div class="col-md-4" data-aos="fade-up">
-            <img src="/public/images/cursos.png" alt="Cursos" class="mb-3" style="width: 100px;">
-            <h2>Cursos</h2>
-            <p>Inscríbete en nuestros cursos y talleres de capacitación.</p>
-            <p><a class="btn btn-custom" href="cursos.php" role="button">Descubrir &raquo;</a></p>
+<section id="secciones" class="py-5">
+    <div class="container">
+        <div class="row text-center">
+            <!-- Revista -->
+            <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="card h-100 shadow-sm">
+                    <img src="/public/images/revista.png" class="card-img-top" alt="Revista">
+                    <div class="card-body">
+                        <h5 class="card-title">Revista</h5>
+                        <p class="card-text">Explora nuestra última edición y sumérgete en el mundo de la ciencia.</p>
+                        <a href="revista.php" class="btn btn-outline-primary">Leer más &raquo;</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Congresos -->
+            <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="card h-100 shadow-sm">
+                    <img src="/public/images/congreso.jpg" class="card-img-top" alt="Congresos">
+                    <div class="card-body">
+                        <h5 class="card-title">Congresos</h5>
+                        <p class="card-text">Infórmate sobre nuestros próximos eventos y cómo participar.</p>
+                        <a href="congresos.php" class="btn btn-outline-primary">Ver más &raquo;</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Cursos -->
+            <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                <div class="card h-100 shadow-sm">
+                    <img src="/public/images/cursos.jpg" class="card-img-top" alt="Cursos">
+                    <div class="card-body">
+                        <h5 class="card-title">Cursos</h5>
+                        <p class="card-text">Inscríbete en nuestros cursos y talleres de capacitación.</p>
+                        <a href="cursos.php" class="btn btn-outline-primary">Descubrir &raquo;</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</section>
+
+<!-- Sección de Valores -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2>Nuestros Valores</h2>
+            <p class="lead">Los pilares que nos guían en nuestra misión</p>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-delay="100">
+                <i class="fas fa-universal-access fa-3x mb-3 text-primary"></i>
+                <h5>Accesibilidad</h5>
+                <p>Hacemos que la ciencia sea comprensible y entretenida para personas de todas las edades.</p>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-lightbulb fa-3x mb-3 text-primary"></i>
+                <h5>Innovación</h5>
+                <p>Desarrollamos productos educativos innovadores como juegos de mesa y materiales interactivos.</p>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-left" data-aos-delay="300">
+                <i class="fas fa-handshake fa-3x mb-3 text-primary"></i>
+                <h5>Colaboración</h5>
+                <p>Trabajamos con universidades y sociedades científicas para expandir nuestra red de conocimiento.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Llamado a la Acción -->
+<section class="cta-section text-white text-center py-5">
+    <div class="container" data-aos="zoom-in">
+        <h2>¿Listo para unirte a la aventura científica?</h2>
+        <p class="lead">Sé parte de nuestra comunidad y descubre todo lo que ADRC tiene para ofrecerte.</p>
+        <a href="contacto.php" class="btn btn-lg btn-outline-light mt-3">Contáctanos</a>
+    </div>
+</section>
 
 <?php
 include '../templates/footer.php';
